@@ -17,21 +17,25 @@ print("\t", "z = ", z, "\t", type(z))
 
 print("\n", "Converting types")
 
-# convert from int to complex:
+# convert to complex:
 a = complex(x)
-print("\t", "converting from int to complex")
+print("\t", "converting to complex")
+print("\t\t", "a = complex(x)")
+print("\t\t", "a = ", a, "\t", type(a))
 
-# convert from float to int:
+# convert to int:
 b = int(y)
-print("\t", "converting from float to int")
+print("\t", "converting to int")
+print("\t\t", "b = int(y)")
+print("\t\t", "b = ", b, "\t", type(b))
 
-# convert from complex to float:
+# convert to float:
 c = float(x)
-print("\t", "converting from complex to float")
+print("\t", "converting to float")
+print("\t\t", "c = float(x)")
+print("\t\t", "c = ", c, "\t", type(c))
 
-print("\t", "a = ", a, "\t", type(a))
-print("\t", "b = ", b, "\t", type(b))
-print("\t", "c = ", c, "\t", type(c))
+print("\n\t", "converting from complex is not possible")
 
 print("\n", "Generating a random number between 1 and 10")
 # python random module

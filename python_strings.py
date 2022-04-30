@@ -1,5 +1,3 @@
-# Escape Characters
-
 txt = """
 Python Strings!!!
 

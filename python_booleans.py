@@ -1,7 +1,13 @@
-print("\n", "Python Booleans")
+txt = """
+Python Booleans!!!
+
+    see: https://www.w3schools.com/python/python_booleans.asp
+"""
+
+print(txt)
 
 # Comparing and printing expressions
-print("\n", "Comparing and printing results")
+print("", "Comparing and printing results")
 print("\t", "10 > 9", "\t=", 10 > 9)
 print("\t", "10 == 9", "\t=", 10 == 9)
 print("\t", "10 < 9", "\t=", 10 < 9)
