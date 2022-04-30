@@ -1,8 +1,16 @@
+txt = """
+Python Numbers!!!
+
+    see: https://www.w3schools.com/python/python_numbers.asp
+"""
+
+print(txt)
+
 x = 1    # int
 y = 2.8  # float
 z = 1j   # complex
 
-print("\n", "Number types: int, float, complex")
+print("", "Number types: int, float, complex")
 print("\t", "x = ", x, "\t", type(x))
 print("\t", "y = ", y, "\t", type(y))
 print("\t", "z = ", z, "\t", type(z))

@@ -1,8 +1,11 @@
 txt = """
-PYTHON OPERATORS LIST (from https://www.w3schools.com/python/python_operators.asp)
+Python Operators List!!!
+
+    see: https://www.w3schools.com/python/python_operators.asp
 
 Python Arithmetic Operators
-Arithmetic operators are used with numeric values to perform common mathematical operations:
+Arithmetic operators are used with numeric values to
+perform common mathematical operations:
 
 Operator	Name	            Example
 +	        Addition	    x + y
@@ -73,8 +76,10 @@ Operator    Name	                Description
 |	    OR	                        Sets each bit to 1 if one of two bits is 1
 ^	    XOR	                        Sets each bit to 1 if only one of two bits is 1
 ~ 	    NOT	                        Inverts all the bits
-<<	    Zero fill left shift        Shift left by pushing zeros in from the right and let the leftmost bits fall off
->>	    Signed right shift	        Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+<<	    Zero fill left shift        Shift left by pushing zeros in from the right
+                                        and let the leftmost bits fall off
+>>	    Signed right shift	        Shift right by pushing copies of the leftmost
+                                        bit in from the left, and let the rightmost bits fall off
 """
 
 print(txt)

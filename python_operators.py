@@ -1,4 +1,9 @@
 txt = """
+Python Operators!!!
+
+    see: https://www.w3schools.com/python/python_operators.asp
+    see: python_operators_list.py for full list
+
 Python divides the operators in the following groups:
 
 Arithmetic operators
@@ -10,13 +15,10 @@ Membership operators
 Bitwise operators
 """
 
-print("\n", "Python Operators")
-print("\n", txt)
-
-print("see 'python_operators_list.py' for full list")
+print(txt)
 
 # Arithmetic operators
-print("\n", "Arithmetic Operators")
+print("", "Arithmetic Operators")
 print("\t", " 10 + 5 =", 10 + 5)
 print("\t", " 10 * 5 =", 10 * 5)
 print("\t", " 10 / 5 =", 10 / 5)

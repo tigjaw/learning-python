@@ -1,19 +1,27 @@
 # Escape Characters
+
+txt = """
+Python Strings!!!
+
+    see: https://www.w3schools.com/python/python_strings.asp
+
+Escape Characters:
+\'	Single Quote
+\\	Backslash
+\\n	New Line
+\\r	Carriage Return
+\\t	Tab
+\\b	Backspace
+\\f	Form Feed
+\\ooo	Octal value
+\\xhh	Hex value
 """
-\'	Single Quote	
-\\	Backslash	
-\n	New Line	
-\r	Carriage Return	
-\t	Tab	
-\b	Backspace	
-\f	Form Feed	
-\ooo	Octal value	
-\xhh	Hex value
-"""
+
+print(txt)
 
 # Hello World
 hello_world = "HELLO, WORLD!"
-print("\n", "hello_world =", hello_world)
+print("hello_world =", hello_world)
 
 # strings are arrays
 print("\t", "Strings are arrays, so hello_world[0] =", hello_world[0])

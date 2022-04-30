@@ -1,20 +1,22 @@
-"""
-Variable name must start with a letter or the underscore character
-Variable name cannot start with a number
-Variable name can only contain (A-z, 0-9, and _ )
-Variable names are case-sensitive
+txt = """
+Python Basics!!!
 
-Text Type:	str
-Numeric Types:	int, float, complex
-Sequence Types:	list, tuple, range
-Mapping Type:	dict
-Set Types:	set, frozenset
-Boolean Type:	bool
-Binary Types:	bytes, bytearray, memoryview
+    see: https://www.w3schools.com/python/python_intro.asp
+
+Python is a popular programming language.
+It was created by Guido van Rossum, and released in 1991.
+
+It is used for:
+    web development (server-side)
+    software development
+    mathematics
+    system scripting
 """
+
+print(txt)
 
 hello_world = "hello_world = HELLO, WORLD!"
-print("\n", hello_world)
+print("", hello_world)
 print("\t", "Strings are arrays, so hello_world[0] =", hello_world[0])
 
 this = "this"

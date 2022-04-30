@@ -43,7 +43,7 @@ print("\t", "fruit_list[2:]", "\t=", fruit_list[2:])
 print("\t", "fruit_list[-4:-1]", "\t=", fruit_list[-4:-1])
 
 # Check if item exists
-print("\n", "Check if item exists in list")
+print("\n", "Check if item exists in list:")
 print("\t", "if 'apple' in thislist:")
 if "apple" in fruit_list:
     print("\t\t", "Yes, 'apple' is in the fruits list")
