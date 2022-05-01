@@ -8,15 +8,24 @@ Lists are used to store multiple items in a single variable.
 Lists are one of 4 built-in data types in Python used to store collections of data,
 the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
 
+A tuple is a collection which is:
+    - ordered
+    - changeable
+    - allows duplicates
+
+Tuple items are indexed:
+    - the first item has index [0]
+    - the second item has index [1] etc...
+
 Lists are created using [square brackets]
 
 Method	        Description
  append()	Adds an element at the end of the list
- clear()	        Removes all the elements from the list
+ clear()	Removes all the elements from the list
  copy()	        Returns a copy of the list
- count()	        Returns the number of elements with the specified value
+ count()	Returns the number of elements with the specified value
  extend()	Add the elements of a list (or any iterable), to the end of the current list
- index()	        Returns the index of the first element with the specified value
+ index()	Returns the index of the first element with the specified value
  insert()	Adds an element at the specified position
  pop()	        Removes the element at the specified position
  remove()	Removes the item with the specified value
@@ -70,6 +79,17 @@ print("\n", "Check if item exists in list:")
 print("\t", "if 'apple' in fruit_list:")
 if "apple" in fruit_list:
     print("\t\t", "Yes, 'apple' is in fruit_list")
+
+# Unpacking a list
+fruit_list = ["Apple", "Peach", "Plum"]
+print("\n", "Unpacking a List")
+print("\t", "> fruit_list", "\t\t\t=", fruit_list)
+fruit1, fruit2, fruit3 = fruit_list
+print("\t\t", "fruit1, fruit2, fruit3 = fruit_list")
+print("\t\t", "fruit_list unpacked:")
+print("\t\t\t", "fruit1", "\t=", fruit1)
+print("\t\t\t", "fruit2", "\t=", fruit2)
+print("\t\t\t", "fruit3", "\t=", fruit3)
 
 # Changing list items
 fruit_list = ["apple", "banana", "cherry"]
@@ -168,14 +188,14 @@ print("\t\t\t", "result", "\t=", fruit_list)
 print("\n", "Loop through list items")
 fruit_list = ["apple", "banana", "cherry"]
 print("\t", "fruit_list", "\t\t\t=", fruit_list)
-    # for x in list
-print("\t", "> for x in list")
-print("\t\t", "for x in fruit_list:")
-print("\t\t\t", "print(x)")
-for x in fruit_list:
-  print("\t\t\t\t", x)
+    # for i in list
+print("\t", "> for i in list")
+print("\t\t", "for i in fruit_list:")
+print("\t\t\t", "print(i)")
+for i in fruit_list:
+  print("\t\t\t\t", i)
     # for x in range(i)
-print("\t", "> for x in range(i)")
+print("\t", "> for i in range(i)")
 print("\t\t", "for i in range(len(fruit_list)):")
 print("\t\t\t", "print(fruit_list[i])")
 for i in range(len(fruit_list)):
