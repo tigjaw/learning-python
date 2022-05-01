@@ -8,7 +8,20 @@ Lists are used to store multiple items in a single variable.
 Lists are one of 4 built-in data types in Python used to store collections of data,
 the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
 
-Lists are created using square brackets:
+Lists are created using [square brackets]
+
+Method	        Description
+ append()	Adds an element at the end of the list
+ clear()	        Removes all the elements from the list
+ copy()	        Returns a copy of the list
+ count()	        Returns the number of elements with the specified value
+ extend()	Add the elements of a list (or any iterable), to the end of the current list
+ index()	        Returns the index of the first element with the specified value
+ insert()	Adds an element at the specified position
+ pop()	        Removes the element at the specified position
+ remove()	Removes the item with the specified value
+ reverse()	Reverses the order of the list
+ sort()	        Sorts the list
 """
 print(txt)
 
@@ -181,3 +194,97 @@ while i < len(fruit_list):
 print("\n", "List Comprehension")
 fruit_list = ["apple", "banana", "cherry", "kiwi", "mango"]
 print("\t", "fruit_list", "\t\t\t=", fruit_list)
+print() # Iterate and include all fruit
+print("\t", "> Iterate and include all fruit")
+new_list = [x for x in fruit_list]
+print("\t\t", "new_list", "\t\t=" ,"[x for x in fruit_list]")
+print("\t\t", "new_list", "\t\t=", new_list)
+print() # Iterate and include only fruit that contain the letter 'a'
+print("\t", "> Iterate and include only fruit that contain the letter 'a'")
+new_list = [x for x in fruit_list if "a" in x]
+print("\t\t", "new_list", "\t\t=" ,"[x for x in fruit_list if 'a' in x]")
+print("\t\t", "new_list", "\t\t=", new_list)
+print() # Iterate and include all fruit that aren't 'apple'
+print("\t", "> Iterate and include all fruit that aren't 'apple'")
+new_list = [x for x in fruit_list if x != "apple"]
+print("\t\t", "newlist", "\t\t=" ,"[x for x in fruit_list if x != 'apple']")
+print("\t\t", "new_list", "\t\t=", new_list)
+print() # The iterable can be any iterable object, like a list, tuple, set etc
+print("\t", "> The iterable can be any iterable object (e.g. in range(10))")
+new_list = [x for x in range(10)]
+print("\t\t", "new_list", "\t\t=" ,"[x for x in range(10)]")
+print("\t\t", "new_list", "\t\t=", new_list)
+print() # Iterable with a condition - e.g. if x < 5
+print("\t", "> Iterable with a condition - e.g. if x < 5")
+new_list = [x for x in range(10) if x < 5]
+print("\t\t", "new_list", "\t\t=" ,"[x for x in range(10) if x < 5]")
+print("\t\t", "new_list", "\t\t=", new_list)
+print() # Manipulate the expression - e.g. convert to upper case
+print("\t", "> Manipulate the expression - e.g. convert to upper case")
+new_list = [x.upper() for x in fruit_list]
+print("\t\t", "new_list", "\t\t=" ,"[x.upper() for x in fruit_list]")
+print("\t\t", "new_list", "\t\t=", new_list)
+print() # Set the outcome to whatever you like - e.g. set all values to 'hello'
+print("\t", "> Set the outcome to whatever you like - e.g. set all values to 'hello'")
+new_list = ['hello' for x in fruit_list]
+print("\t\t", "new_list", "\t\t=" ,"['hello' for x in fruit_list]")
+print("\t\t", "new_list", "\t\t=", new_list)
+print() # Apply conditions to the expression - return 'orange' instead of 'banana'
+print("\t", "> Apply conditions to the expression - return 'orange' instead of 'banana'")
+new_list = [x if x != "banana" else "orange" for x in fruit_list]
+print("\t\t", "new_list", "\t\t=" ,"[x if x != 'banana' else 'orange' for x in fruit_list]")
+print("\t\t", "new_list", "\t\t=", new_list)
+
+# Sort Lists
+print("\n", "Sort Lists")
+str_list = ["delta", "alpha", "echo", "charlie", "bravo"]
+int_list = [100, 50, 65, 82, 23]
+print() # Sort Strings (Ascending)
+print("\t", "> Sort Strings (Ascending)")
+print("\t", "str_list", "\t\t\t=", str_list)
+str_list.sort()
+print("\t\t", "str_list.sort()")
+print("\t\t", "str_list", "\t\t=", str_list)
+print() # Sort Numberts (Ascending)
+print("\t", "> Sort Numberts (Ascending)")
+print("\t", "int_list", "\t\t\t=", int_list)
+int_list.sort()
+print("\t\t", "int_list.sort()")
+print("\t\t", "int_list", "\t\t=", int_list)
+print () # Sort Descending
+print("\t", "> Sort Numberts (Descending)")
+int_list.sort(reverse = True)
+print("\t\t", "int_list.sort(reverse = True)")
+print("\t\t", "int_list", "\t\t=", int_list)
+str_list.sort(reverse = True)
+print("\t\t", "str_list.sort(reverse = True)")
+print("\t\t", "str_list", "\t\t=", str_list)
+print() # Sort Case-Insensitive
+print("\t", "> Sort Case-Insensitive")
+str_list.sort(key = str.lower)
+print("\t\t", "str_list.sort(key = str.lower)")
+print("\t\t", "str_list", "\t\t=", str_list)
+print() # Custom Sort Function
+print("\t", "> Custom Sort Function - e.g. sort the list based on how close the number is to 50")
+print("\t\t", "def my_sort(n):")
+print("\t\t\t", "return abs(n - 50)")
+print("\t\t", "int_list.sort(key = my_sort)")
+def my_sort(n):
+  return abs(n - 50)
+int_list.sort(key = my_sort)
+print("\t\t\t", "result", "\t=", int_list)
+
+# Copy Lists
+print("\n", "Copy Lists")
+print() # with copy() method
+print("\t", "Make a copy of a list with the copy() method")
+copy_list = str_list.copy()
+print("\t\t", "copy_list = str_list.copy()")
+print("\t\t", "copy_list", "\t\t=", copy_list)
+print() # with list() method
+print("\t", "Make a copy of a list with the list() method")
+copy_list = list(str_list)
+print("\t\t", "copy_list = list(str_list)")
+print("\t\t", "copy_list", "\t\t=", copy_list)
+
+
