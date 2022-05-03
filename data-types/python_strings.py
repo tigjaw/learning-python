@@ -83,10 +83,34 @@ print("\t\t", "split_me.split('_') returns ", split_me.split('_'))
 
 # String Concatenation
 print("\n", "String Concatenation")
-h = "hello"
-w = "world"
-merge = h + w
-print("\t", "h =", h, ", w =", w, ", h + w =", merge)
+  # output multiple variables, separated by a comma
+print("\t", "> String concatenation with a comma")
+comma1 = "Concatenate" # doesn't require spaces
+comma2 = "with"
+comma3 = "a COMMA"
+txt = """
+                 comma1 = "Concatenate" # doesn't require spaces
+                 comma2 = "with"
+                 comma3 = "a COMMA"
+                 print(comma1, comma2, comma3)
+"""
+print(txt)
+print("\t\t\t", "result :", comma1, comma2, comma3)
+print()
+  # output multiple variables, separated by a plus sign
+print("\t", "> String concatenation with a comma")
+plus1 = "Concatenate " # must add spaces
+plus2 = "with "
+plus3 = "a PLUS"
+txt = """
+                 plus1 = "Concatenate " # must add spaces
+                 plus2 = "with "
+                 plus3 = "a PLUS"
+                 print(comma1, comma2, comma3)
+"""
+print(txt)
+print("\t\t\t", "result :", plus1 + plus2 + plus3)
+print()
 
 # Formatting Strings
 print("\n", "Formatting Strings")
