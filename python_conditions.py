@@ -17,8 +17,10 @@ Python supports the usual logical conditions from mathematics:
 """
 print(txt)
 
+n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
 # IF
-print("\n", "IF - keyword")
+print(n, "IF - keyword")
 txt = """
 	 > the code
         
@@ -35,12 +37,12 @@ b = 1
 is_greater = False
 if a > b:
     is_greater = True
-print("\t", "> result:")
+print(t1, "> result:")
 print()
-print("\t\t", "is_greater", "=", is_greater)
+print(t2, "is_greater", "=", is_greater)
 
 # ELIF
-print("\n", "ELIF - keyword")
+print(n, "ELIF - keyword")
 txt = """
 	 > the code
         
@@ -61,12 +63,12 @@ if b > a:
     is_equal = False
 elif a == b:
     is_equal = True
-print("\t", "> result:")
+print(t1, "> result:")
 print()
-print("\t\t", "is_equal", "=", is_greater)
+print(t2, "is_equal", "=", is_greater)
 
 # ELSE
-print("\n", "ELSE - keyword")
+print(n, "ELSE - keyword")
 txt = """
 	 > the code
         
@@ -90,15 +92,15 @@ elif b < a:
     is_equal = False
 else:
     is_equal = True
-print("\t", "> result:")
+print(t1, "> result:")
 print()
-print("\t\t", "is_equal", "=", is_greater)
+print(t2, "is_equal", "=", is_greater)
 
 # Short-hand statements
-print("\n", "Short-hand if Statements")
+print(n, "Short-hand if Statements")
 print()
     # IF - short-hand statement
-print("\t", "> IF - short-hand statement")
+print(t1, "> IF - short-hand statement")
 txt = """
                  > the code
                  
@@ -113,12 +115,12 @@ a = 200
 b = 1
 is_greater = False
 if a > b: is_greater = True
-print("\t\t", "> result:")
+print(t2, "> result:")
 print()
-print("\t\t\t", "is_greater", "=", is_greater)
+print(t3, "is_greater", "=", is_greater)
 print()
     # IF_ELSE - short-hand statement
-print("\t", "> IF_ELSE - short-hand statement")
+print(t1, "> IF_ELSE - short-hand statement")
 txt = """
                  > the code
                      
@@ -128,14 +130,14 @@ txt = """
                      print("A") if a > b else print("B")
 """
 print(txt)
-print("\t\t", "> result:")
+print(t2, "> result:")
 print()
 a = 200
 b = 1
-print("\t\t\t", "A") if a > b else print("\t\t\t", "B")
+print(t3, "A") if a > b else print(t3, "B")
 print()
     # IF...ELSE - short-hand statement w/ 3 conditions
-print("\t", "> IF...ELSE - short-hand statement w/ 3 conditions")
+print(t1, "> IF...ELSE - short-hand statement w/ 3 conditions")
 txt = """
                  > the code
                      
@@ -145,14 +147,14 @@ txt = """
                      print("A") if a > b else print("a == b") if a == b else print("B")
 """
 print(txt)
-print("\t\t", "> result:")
+print(t2, "> result:")
 print()
 a = 33
 b = 33
-print("\t\t\t", "A") if a > b else print("\t\t\t", "a == b") if a == b else print("\t\t\t", "B")
+print(t3, "A") if a > b else print(t3, "a == b") if a == b else print(t3, "B")
 
 # AND - keyword
-print("\n", "AND - keyword")
+print(n, "AND - keyword")
 txt = """
 	 > the code
              
@@ -164,16 +166,16 @@ txt = """
                      print("Both conditions are True")
 """
 print(txt)
-print("\t", "> result:")
+print(t1, "> result:")
 print()
 a = 200
 b = 33
 c = 500
 if a > b and c > a:
-    print("\t\t", "Both conditions are True")
+    print(t2, "Both conditions are True")
 
 # OR - keyword
-print("\n", "OR - keyword")
+print(n, "OR - keyword")
 txt = """
 	 > the code
              
@@ -185,16 +187,16 @@ txt = """
                      print("At least one of the conditions is True")
 """
 print(txt)
-print("\t", "> result:")
+print(t1, "> result:")
 print()
 a = 200
 b = 33
 c = 500
 if a > b or a > c:
-    print("\t\t", "At least one of the conditions is True")
+    print(t2, "At least one of the conditions is True")
 
 # Nested if - statements
-print("\n", "Nested If - Statements")
+print(n, "Nested If - Statements")
 txt = """
 	 > the code
              
@@ -208,18 +210,18 @@ txt = """
                             print("but not above 20.")
 """
 print(txt)
-print("\t", "> result:")
+print(t1, "> result:")
 print()
 x = 100
 if x > 10:
-    print("\t\t", "Above ten,")
+    print(t2, "Above ten,")
     if x > 20:
-        print("\t\t", "and also above 20!")
+        print(t2, "and also above 20!")
     else:
-        print("\t\t", "but not above 20.")
+        print(t2, "but not above 20.")
 
 # Pass - statements
-print("\n", "Pass - Statements")
+print(n, "Pass - Statements")
 txt = """
 	 > the code
              

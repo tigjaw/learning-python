@@ -29,11 +29,12 @@ The range() Function
   starting from 0 by default, and increments by 1 (by default),
   and ends at a specified number.
 """
-
 print(txt)
 
+n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
 # For
-print("", "For")
+print(n, "For")
 txt = """
 	 > code:
                      
@@ -52,11 +53,10 @@ txt = ""
 for x in fruits:
   txt = txt + x + " "
 
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
 
 # Looping Through a String
-print("", "Looping Through a String")
+print(n, "Looping Through a String")
 txt = """
 	 > code:
              
@@ -74,11 +74,10 @@ txt = ""
 for x in "banana":
   txt = txt + x + " "
 
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
 
 # Break
-print("", "Break")
+print(n, "Break")
 txt = """
 	 > code:
 	 
@@ -101,11 +100,11 @@ for x in fruits:
   if x == "banana":
     break
 
-print("\t", "> result:", txt)
+print(t1, "> result:", txt)
 print()
 
 # Continue
-print("", "Continue")
+print(n, "Continue")
 txt = """
 	 > code:
 	 
@@ -128,13 +127,12 @@ for x in fruits:
     continue
   txt = txt + x + " "
 
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
 
 # Range
-print("", "Range")
+print(n, "Range")
   # Range
-print("\t", "> Basic Range")
+print(t1, "> Basic Range")
 txt = """
 		 > code:
                          
@@ -152,10 +150,9 @@ txt = ""
 for x in range(6):
   txt = txt + str(x) + " "
 
-print("\t\t", "> result:", txt)
-print()
+print(t2, "> result:", txt)
   # Range with starting point
-print("\t", "> Range with starting point")
+print(n, t1, "> Range with starting point")
 txt = """
 		 > code:
                      
@@ -173,10 +170,9 @@ txt = ""
 for x in range(2, 6):
   txt = txt + str(x) + " "
 
-print("\t\t", "> result:", txt)
-print()
+print(t2, "> result:", txt)
   # Range with increment
-print("\t", "> Range with increment")
+print(n, t1, "> Range with increment")
 txt = """
 		 > code:
                      
@@ -194,11 +190,9 @@ txt = ""
 for x in range(2, 30, 3):
   txt = txt + str(x) + " "
 
-print("\t\t", "> result:", txt)
-print()
-
+print(t2, "> result:", txt)
 # Else
-print("", "Else")
+print(n, "Else")
 txt = """
 	 > code:
 	 
@@ -221,11 +215,10 @@ for x in range(6):
 else:
   txt += "(finally finished)"
 
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
 
 # Nested Loops
-print("", "Nested Loops")
+print(n, "Nested Loops")
 txt = """
 	 > code:
 	 
@@ -242,11 +235,8 @@ print(txt)
 
 adj = ["red", "big", "tasty"]
 fruits = ["apple", "banana", "cherry"]
-print("\t", "> result:")
+print(t1, "> result:")
 
 for x in adj:
   for y in fruits:
-    print("\t\t", x,y)
-
-
-print()
+    print(t2, x,y)

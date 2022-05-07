@@ -3,45 +3,46 @@ Python Numbers!!!
 
     see: https://www.w3schools.com/python/python_numbers.asp
 """
-
 print(txt)
+
+n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
 
 x = 1    # int
 y = 2.8  # float
 z = 1j   # complex
 
-print("", "Number types: int, float, complex")
-print("\t", "x = ", x, "\t", type(x))
-print("\t", "y = ", y, "\t", type(y))
-print("\t", "z = ", z, "\t", type(z))
+print(n, "Number types: int, float, complex")
+print(t1, "x = ", x, t1, type(x))
+print(t1, "y = ", y, t1, type(y))
+print(t1, "z = ", z, t1, type(z))
 
-print("\n", "Converting types")
+print(n, "Converting types")
 
 # convert to complex:
 a = complex(x)
-print("\t", "converting to complex")
-print("\t\t", "a = complex(x)")
-print("\t\t", "a = ", a, "\t", type(a))
+print(t1, "converting to complex")
+print(t2, "a = complex(x)")
+print(t2, "a = ", a, t1, type(a))
 
 # convert to int:
 b = int(y)
-print("\t", "converting to int")
-print("\t\t", "b = int(y)")
-print("\t\t", "b = ", b, "\t", type(b))
+print(t1, "converting to int")
+print(t2, "b = int(y)")
+print(t2, "b = ", b, t1, type(b))
 
 # convert to float:
 c = float(x)
-print("\t", "converting to float")
-print("\t\t", "c = float(x)")
-print("\t\t", "c = ", c, "\t", type(c))
+print(t1, "converting to float")
+print(t2, "c = float(x)")
+print(t2, "c = ", c, t1, type(c))
 
-print("\n\t", "converting from complex is not possible")
+print(n, t1, "converting from complex is not possible")
 
-print("\n", "Generating a random number between 1 and 10")
+print(n, "Generating a random number between 1 and 10")
 # python random module
 import random
 
-print("\t", random.randrange(1, 10))
+print(t1, random.randrange(1, 10))
 
 X = int(1)   # x will be 1
 Y = int(2.8) # y will be 2

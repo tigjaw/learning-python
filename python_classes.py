@@ -35,11 +35,12 @@ The Self Parameter:
     It does not have to be named self , you can call it whatever you like,
     but it has to be the first parameter of any function in the class
 """
-
 print(txt)
 
+n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
 # Creating a Class
-print("\n", "Creating a Class & Object")
+print(n, "Creating a Class & Object")
 txt = """
          > code:
          
@@ -55,10 +56,10 @@ class MyClass:
     x = 5
     
 mc = MyClass()
-print("\t", "> result:", mc.x)
+print(t1, "> result:", mc.x)
 
 # __init__() Function
-print("\n", "__init__() Function")
+print(n, "__init__() Function")
 txt = """
          > code:
          
@@ -79,10 +80,10 @@ class Person:
 
 person = Person("John", 36)
 
-print("\t", f"> result: {person.name} ({person.age})")
+print(t1, f"> result: {person.name} ({person.age})")
 
 # Object Methods
-print("\n", "Object Methods")
+print(n, "Object Methods")
 txt = """
          > code:
          
@@ -105,13 +106,13 @@ class Person:
     self.age = age
 
   def result(self):
-    print("\t", f"> result: {self.name} ({self.age})")
+    print(t1, f"> result: {self.name} ({self.age})")
 
 perrson = Person("John", 36)
 perrson.result()
 
 # Self Parameter
-print("\n", "Self Parameter")
+print(n, "Self Parameter")
 txt = """
          > code:
          
@@ -134,13 +135,13 @@ class Person:
     reference.age = age
 
   def result(inst):
-    print("\t", f"> result: {inst.name} ({inst.age})")
+    print(t1, f"> result: {inst.name} ({inst.age})")
 
 perrson = Person("John", 36)
 perrson.result()
 
 # Modify Object
-print("\n", "Modify Objects")
+print(n, "Modify Objects")
 txt = """
          > Modify Object Properties
          

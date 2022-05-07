@@ -75,11 +75,12 @@ Recursion:
     To a new developer it can take some time to work out how exactly this works,
     best way to find out is by testing and modifying it.
 """
-
 print(txt)
 
+n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
 # Creating & Calling a Function
-print("\n", "Creating & Calling a Function")
+print(n, "Creating & Calling a Function")
 txt = """
 	 > Code
              
@@ -87,14 +88,14 @@ txt = """
                      print("Hello from a function")
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function():
-    print("\t\t", "Hello from a function")
+    print(t2, "Hello from a function")
 my_function()
 
 # Arguments
-print("\n", "Arguments")
+print(n, "Arguments")
 txt = """
 	 > Code
              
@@ -104,14 +105,14 @@ txt = """
                  my_function("Agent")
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(first_name):
-    print("\t\t", first_name, "Smith")
+    print(t2, first_name, "Smith")
 my_function("Agent")
 
 # Multiple Arguments
-print("\n", "Multiple Arguments")
+print(n, "Multiple Arguments")
 txt = """
 	 > Code
              
@@ -121,14 +122,14 @@ txt = """
                  my_function("Agent", 100)
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(first_name, age):
-    print("\t\t", f"name: {first_name}, age: {age}")
+    print(t2, f"name: {first_name}, age: {age}")
 my_function("Agent", 100)
 
 # Arbitrary Arguments
-print("\n", "Arbitrary Arguments")
+print(n, "Arbitrary Arguments")
 txt = """
 	 > Code
              
@@ -138,14 +139,14 @@ txt = """
                  my_function("args 1", "args 2", "args 3")
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(*args):
-    print("\t\t", f"number of arguments: {len(args)}")
+    print(t2, f"number of arguments: {len(args)}")
 my_function("arg 1", "arg 2", "args 3")
 
 # Keyword Arguments kwargs
-print("\n", "Keyword Arguments (kwargs)")
+print(n, "Keyword Arguments (kwargs)")
 txt = """
 	 > Code
              
@@ -155,15 +156,15 @@ txt = """
                  my_function(arg1 = 1, arg2 = 2, arg3 = 3)
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(arg1, arg2, arg3):
-    print("\t\t", "The order of the arguments does not matter!")
+    print(t2, "The order of the arguments does not matter!")
 
 my_function(arg1 = 1, arg2 = 2, arg3 = 3)
 
 # Arbitrary Keyword Arguments **kwargs
-print("\n", "Arbitrary Keyword Arguments (**kwargs)")
+print(n, "Arbitrary Keyword Arguments (**kwargs)")
 txt = """
 	 > Code
              
@@ -173,15 +174,15 @@ txt = """
                  my_function(first_name = "Agent", last_name = "Smith")
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(**child):
-    print("\t\t", "The child's last name is " + child["last_name"])
+    print(t2, "The child's last name is " + child["last_name"])
 
 my_function(first_name = "Agent", last_name = "Smith")
 
 # Default Parameter Value
-print("\n", "Default Parameter Value")
+print(n, "Default Parameter Value")
 txt = """
 	 > Code
              
@@ -192,16 +193,16 @@ txt = """
                  my_function()
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(country = "England"):
-    print("\t\t", "I am from", country)
+    print(t2, "I am from", country)
 
 my_function("Brazil")
 my_function()
 
 # List as an Argument
-print("\n", "List as an Argument")
+print(n, "List as an Argument")
 txt = """
 	 > Code
              
@@ -213,17 +214,17 @@ txt = """
                  my_function(fruit_list)
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(fruit):
     for x in fruit:
-        print("\t\t", x)
+        print(t2, x)
 
 fruit_list = ["apple", "banana", "cherry"]
 my_function(fruit_list)
 
 # Return Values
-print("\n", "Return Values")
+print(n, "Return Values")
 txt = """
 	 > Code
              
@@ -233,15 +234,15 @@ txt = """
                  print(my_function(3))
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def my_function(x):
     return 5 * x
 
-print("\t\t", my_function(3))
+print(t2, my_function(3))
 
 # Recursion
-print("\n", "Recursion")
+print(n, "Recursion")
 txt = """
 	 > Code
              
@@ -251,22 +252,22 @@ txt = """
                      print("result =", result)
                  else:
                      result = 0
-                 print("\t\t", "returning result")
+                 print(t2, "returning result")
                  return result
 
                  tri_recursion(6)
 """
 print(txt)
-print("\t", "> result:", "\n")
+print(t1, "> result:", n)
 
 def tri_recursion(k):
     if(k > 0):
-        print("\t\t", "k =", k)
+        print(t2, "k =", k)
         result = k + tri_recursion(k - 1)
-        print("\t\t\t", "  result =", result)
+        print(t3, "  result =", result)
     else:
         result = 0
-    print("\t\t", "returning result")
+    print(t2, "returning result")
     return result
 
 tri_recursion(6)

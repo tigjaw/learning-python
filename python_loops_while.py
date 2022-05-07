@@ -20,8 +20,8 @@ The While Loop:
 
 print(txt)
 
-# Whlie
-print("", "While")
+# While
+print(n, "While")
 txt = """
 	 > code:
                  
@@ -40,11 +40,10 @@ txt = ""
 while i < 6:
   txt = txt + str(i) + " "
   i += 1
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
 
 # Break
-print("", "Break")
+print(n, "Break")
 txt = """
 	 > code:
 	 
@@ -67,11 +66,10 @@ while i < 6:
   if i == 3:
     break
   i += 1
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
 
 # Continue
-print("", "Continue")
+print(n, "Continue")
 txt = """
 	 > code:
 	 
@@ -94,11 +92,10 @@ while i < 6:
   if i == 3:
     continue
   txt = txt + str(i) + " "
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
 
 # Else
-print("", "Else")
+print(n, "Else")
 txt = """
 	 > code:
 	 
@@ -120,5 +117,4 @@ while i < 6:
   i += 1
 else:
   txt = txt + "(i is no longer less than 6)"
-print("\t", "> result:", txt)
-print()
+print(t1, "> result:", txt)
