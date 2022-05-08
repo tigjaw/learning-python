@@ -22,7 +22,7 @@ Iterator vs Iterable:
 
     We can also use a for loop to iterate through an iterable object.
 
-Create an Iterator
+Create an Iterator:
     To create an object/class as an iterator you have to implement the
     methods __iter__() and __next__() to your object.
 
@@ -35,10 +35,7 @@ Create an Iterator
     The __next__() method also allows you to do operations,
     and must return the next item in the sequence.
 
-StopIteration
-    The example above would continue forever if you had enough next() statements,
-    or if it was used in a for loop.
-
+StopIteration:
     To prevent the iteration to go on forever,
     we can use the StopIteration statement.
 
@@ -47,39 +44,149 @@ StopIteration
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
 
 # Iterator vs Iterable
 print(n, "Iterator vs Iterable")
 txt = """
+	 > code:
+            
+                 mu_tuple = ("apple", "banana", "cherry")
+                 my_iterator = iter(mu_tuple)
 
+                 print(next(my_iterator))
+		 print(next(my_iterator))
+		 print(next(my_iterator))
+		 
+	 >>> result:
 """
 print(txt)
 
 mu_tuple = ("apple", "banana", "cherry")
 my_iterator = iter(mu_tuple)
 
-print(next(my_iterator))
-print(next(my_iterator))
-print(next(my_iterator))
+print(t2, next(my_iterator))
+print(t2, next(my_iterator))
+print(t2, next(my_iterator))
 
-# Looping Through an Iterator
-print(n, "Looping Through an Iterator")
+# String Iterator
+print(n, "String Iterator")
 txt = """
+	 > code:
+            
+                 my_string = "abc"
+                 my_iterator = iter(my_string)
 
+                 print(next(my_iterator))
+		 print(next(my_iterator))
+		 print(next(my_iterator))
+
+	 >>> result:
 """
 print(txt)
+
+my_string = "abc"
+my_iterator = iter(my_string)
+
+print(t2, next(my_iterator))
+print(t2, next(my_iterator))
+print(t2, next(my_iterator))
 
 # Create an Iterator
 print(n, "Create an Iterator")
 txt = """
+	 > code:
+        
+                 class MyNumbers:
+                     def __iter__(self):
+                         self.a = 1
+                         return self
 
+                     def __next__(self):
+                         x = self.a
+                         self.a += 1
+                         return x
+
+                 myclass = MyNumbers()
+                 myiter = iter(myclass)
+
+                 print(next(myiter))
+                 print(next(myiter))
+                 print(next(myiter))
+
+	 >>> result:
 """
 print(txt)
+
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+
+    def __next__(self):
+        x = self.a
+        self.a += 1
+        return x
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(t2, next(myiter))
+print(t2, next(myiter))
+print(t2, next(myiter))
 
 # StopIteration
 print(n, "StopIteration")
 txt = """
+	 > code:
+	 
+		 class MyNumbers:
+                     def __iter__(self):
+                         self.a = 1
+                         return self
 
+                     def __next__(self):
+                         if self.a <= 3:
+                             x = self.a
+                             self.a += 1
+                         return x
+                         else:
+                             raise StopIteration
+
+                     myclass = MyNumbers()
+                     myiter = iter(myclass)
+
+                     for x in myiter:
+                         print(x)
+
+	 >>> result:
 """
 print(txt)
+
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+
+    def __next__(self):
+        if self.a <= 3:
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+for x in myiter:
+    print(t2, x)

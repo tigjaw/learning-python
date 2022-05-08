@@ -41,7 +41,16 @@ Dictionaries are written with {curly brackets}, and have keys and values.
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
 
 # Creating a Dictionary
 print(n, "Creating a Dictionary:")
@@ -62,26 +71,26 @@ txt = """
 print(txt)
 
 # Printing a Dictionary
-print(n, "Printing a Dictionary:", n)
+print(n, "Printing a Dictionary:")
 
     # Print Dictionary
-print(t1, "> Print the Dictionary Contents")
-print(t2, "print(car_dict)", "\t=", car_dict, n)
+print(n, t1, "> Print the Dictionary Contents", n)
+print(t2, f"print(car_dict) {t1}=", car_dict)
 
     # Print Data Type
-print(t1, "> Print the Dictionary Data Type")
-print(t2, "type(car_dict)", "\t=", type(car_dict), n)
+print(n, t1, "> Print the Dictionary Data Type", n)
+print(t2, f"type(car_dict) {t1}=", type(car_dict))
 
     # Print Dictionary Length
-print(t1, "> Print the Dictionary Length")
-print(t2, "len(car_dict)", "\t\t=", len(car_dict), n)
+print(n, t1, "> Print the Dictionary Length", n)
+print(t2, f"len(car_dict) {t2}=", len(car_dict))
 
     # Print a key value
-print(t1, "> Print the Value at a specified Key")
-print(t2, "thisdict['brand']", "\t=", car_dict["brand"], n)
+print(n, t1, "> Print the Value at a specified Key", n)
+print(t2, f"thisdict['brand'] {t1}=", car_dict["brand"])
 
     # Duplicates aren't allowed
-print(t1, "> Duplicate values will overwrite existing values")
+print(n, t1, "> Duplicate values will overwrite existing values")
 
 car_dict = {
     "brand": "Ford",
@@ -89,6 +98,7 @@ car_dict = {
     "year": 1964,
     "year": 2002
 }
+
 txt = """
                  car_dict = {
                      "brand": "Ford",
@@ -99,16 +109,18 @@ txt = """
 """
 print(txt)
 
-print(t2, "print(car_dict)", "\t=", car_dict, n)
+print(t2, f"print(car_dict) {t1}=", car_dict)
 
     # Data Types
-print(t1, "> Dict items can be of any data type")
+print(n, t1, "> Dict items can be of any data type")
+
 car_dict = {
     "brand": "Ford",
     "electric": False,
     "year": 1964,
     "colors": ["red", "white"]
 }
+
 txt = """
                  car_dict = {
                      "brand": "Ford",
@@ -119,55 +131,105 @@ txt = """
 """
 print(txt)
 
-print(t2, "print(car_dict)", "\t=", car_dict)
+print(t2, f"print(car_dict) {t1}=", car_dict)
 
 # Accessing Items
 print(n, "Access Dictionary Items")
 
+print(n, t1, f"car_dict {t2}=", car_dict)
+
     # with dict['key']
-print(t1, "> with dict['key']", n)
+print(n, t1, "> with dict['key']")
+
+txt = f"""
+		 > code:
+		 
+			 brand {t1}= car_dict["brand"]
+
+		 >>> result:
+"""
+print(txt)
 
 brand = car_dict["brand"]
 
-print(t2, "brand = car_dict.get('brand')")
-print(t3, "brand", "\t\t=", brand, n)
+print(t3, f"brand {t1}=", brand)
 
     # with dict.get('key')
-print(t1, "> with dict.get('key')", n)
+print(n, t1, "> with dict.get('key')")
+
+txt = f"""
+		 > code:
+		 
+			 brand {t1}= car_dict.get("brand")
+
+		 >>> result:
+"""
+print(txt)
 
 brand = car_dict.get("brand")
 
-print(t2, "brand = car_dict.get('brand')")
-print(t3, "brand", "\t\t=", brand, n)
+print(t3, f"brand {t1}=", brand)
 
     # keys()
-print("\t", "> Get Dictionary Keys", n)
+print(n, t1, "> Get Dictionary Keys")
+
+txt = f"""
+		 > code:
+		 
+			 keys {t1}= car_dict.keys()
+
+		 >>> result:
+"""
+print(txt)
 
 keys = car_dict.keys()
 
-print(t2, "keys = car_dict.keys()")
-print(t3, "keys", "\t\t=", keys, n)
+print(t3, f"keys {t1}=", keys)
 
     # values()
-print(t1, "> Get Dictionary Values", n)
+print(n, t1, "> Get Dictionary Values")
 
-values = car_dict.values()
+txt = f"""
+		 > code:
+		 
+			 vals {t1}= car_dict.values()
 
-print(t2, "values = car_dict.values()")
-print(t3, "values", "\t=", values, n)
+		 >>> result:
+"""
+print(txt)
+
+vals = car_dict.values()
+
+print(t3, f"vals {t1}=", vals)
 
     # items()
-print(t1, "> Get Dictionary Items", n)
+print(n, t1, "> Get Dictionary Items")
+
+txt = f"""
+		 > code:
+		 
+			 items {t1}= car_dict.items()
+
+		 >>> result:
+"""
+print(txt)
 
 items = car_dict.items()
 
-print(t2, "items = car_dict.items()")
-print(t3, "items", "\t\t=", items, n)
+print(t3, f"itms {t1}=", items)
 
     # check if key exists
-print(t1, "> Check if key exists", n)
+print(n, t1, "> Check if key exists")
 
-print(t2, "if 'brand' in car_dict:")
+txt = """
+		 > code:
+		 
+			 if "brand" in car_dict:
+                             print("Yes, 'brand' is one of the keys in car_dict!")
+
+		 >>> result:
+"""
+print(txt)
 
 if "brand" in car_dict:
     print(t3, "Yes, 'brand' is one of the keys in car_dict!")
@@ -181,23 +243,35 @@ car_dict = {
     "year": 1964
 }
 
-print(t1, "car_dict", "\t\t\t=", car_dict, n)
+print(n, t1, f"car_dict {t3}=", car_dict)
 
     # with Key
-print(t1, "> with dict['key'] = value", n)
+print(n, t1, "> with dict['key'] = value")
+
+txt = """
+		 car_dict["year"] = 2018
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict["year"] = 2018
 
-print(t2, "car_dict['year'] = 2018")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
     # update({key:value})
-print(t1, "> with dict.update({key:value})", n)
+print(n, t1, "> with dict.update({key:value})")
+
+txt = """
+		 car_dict.update({"year": 2020})
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict.update({"year": 2020})
 
-print(t2, "car_dict.update({'year': 2020})")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
 # Adding Items
 print(n, "Adding Dictionary Items")
@@ -208,23 +282,35 @@ car_dict = {
     "year": 1964
 }
 
-print(t1, "car_dict", "\t\t\t=", car_dict, n)
+print(n, t1, f"car_dict {t3}=", car_dict)
 
     # with Key
-print(t1, "> with dict['key'] = value", n)
+print(n, t1, "> with dict['key'] = value")
+
+txt = """
+		 car_dict["colour"] = "red"
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict["colour"] = "red"
 
-print(t2, "car_dict['colour'] = 'red'")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
     # update({key:value})
-print(t1, "> with dict.update({key:value})", n)
+print(n, t1, "> with dict.update({key:value})")
+
+txt = """
+		 car_dict.update({"colour": "red"})
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict.update({"colour": "red"})
 
-print(t2, "car_dict.update({'colour': 'red'})")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
 # Removing Items
 print(n, "Removing Dictionary Items")
@@ -235,18 +321,31 @@ car_dict = {
     "year": 1964
 }
 
-print(t1, "car_dict", t3, car_dict)
+print(n, t1, "car_dict", t3, car_dict)
 
     # pop()
-print(t1, "> with dict.pop('key')")
+print(n, t1, "> with dict.pop('key')")
+
+txt = """
+		 car_dict.pop("brand")
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict.pop("brand")
 
-print(t2, "car_dict['colour'] = 'red'")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
     # update({key:value})
-print(t1, "> with dict.popitem()")
+print(n, t1, "> with dict.popitem()")
+
+txt = """
+		 car_dict.popitem()
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict = {
     "brand": "Ford",
@@ -255,11 +354,17 @@ car_dict = {
 }
 car_dict.popitem()
 
-print(t2, "car_dict.popitem()")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
     # del dict['key']
-print(t1, "> with del dict['key']")
+print(n, t1, "> with del dict['key']")
+
+txt = """
+		 del car_dict["model"]
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict = {
     "brand": "Ford",
@@ -268,11 +373,17 @@ car_dict = {
 }
 del car_dict["model"]
 
-print(t2, "del car_dict['model']")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
     # del dict
-print(t1, "> with del dict")
+print(n, t1, "> with del dict")
+
+txt = """
+		 del car_dict
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict = {
     "brand": "Ford",
@@ -281,11 +392,17 @@ car_dict = {
 }
 del car_dict
 
-print(t2, "del car_dict")
-print(t3, "car_dict", "\t=", "no longer exists!", n)
+print(t2, f"car_dict {t1}= no longer exists!")
 
     # clear()
-print(t1, "> with dict.clear()")
+print(n, t1, "> with dict.clear()")
+
+txt = """
+		 car_dict.clear()
+
+	 >>> result:
+"""
+print(txt)
 
 car_dict = {
     "brand": "Ford",
@@ -294,8 +411,7 @@ car_dict = {
 }
 car_dict.clear()
 
-print(t2, "car_dict.clear()")
-print(t3, "car_dict", "\t=", car_dict, n)
+print(t2, f"car_dict {t1}=", car_dict)
 
 # Loop Through Dictionary
 print(n, "Loop Through Dictionary")
@@ -307,11 +423,15 @@ car_dict = {
 }
 
     # for i in dict
-print(t1, "> for i in dict")
+print(n, t1, "> for i in dict")
 
 txt = """
-                 for i in car_dict:
-                     print(i)
+		 > code:
+	 
+			 for i in car_dict:
+                             print(i)
+                     
+		 >>> result:
 """
 print(txt)
 
@@ -319,8 +439,12 @@ for i in car_dict:
     print(t3, i)
     
 txt = """
-                 for i in car_dict:
-                     print(car_dict[i])
+		 > code:
+	 
+			 for i in car_dict:
+                             print(car_dict[i])
+                     
+		 >>> result:
 """
 print(txt)
 
@@ -331,8 +455,12 @@ for i in car_dict:
 print(n, t1, "> for i in dict.values()")
 
 txt = """
-                 for i in car_dict.values():
-                     print(i)
+		 > code:
+	 
+			 for i in car_dict.values():
+                             print(i)
+                     
+		 >>> result:
 """
 print(txt)
 
@@ -343,8 +471,12 @@ for i in car_dict.values():
 print(n, t1, "> for i in dict.keys()")
 
 txt = """
-                 for i in car_dict.keys():
-                     print(i)
+		 > code:
+	 
+			 for i in car_dict.keys():
+                             print(i)
+                     
+		 >>> result:
 """
 print(txt)
 
@@ -355,8 +487,12 @@ for i in car_dict.keys():
 print(n, t1, "> for i, j in dict.items()")
 
 txt = """
-                 for i, j in car_dict.items():
-                     print(i)
+		 > code:
+	 
+			 for i, j in car_dict.items():
+                             print(i, j)
+                     
+		 >>> result:
 """
 print(txt)
 
