@@ -31,20 +31,32 @@ The range() Function
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
 
 # For
 print(n, "For")
+
 txt = """
 	 > code:
                      
                  fruits = ["apple", "banana", "cherry"]
-                 txt = ""
+                 txt    = ""
                  
                  for x in fruits:
                      txt = "" + x + " "
                      
                  print(txt)
+
+	 >>> result:
 """
 print(txt)
 
@@ -53,10 +65,11 @@ txt = ""
 for x in fruits:
   txt = txt + x + " "
 
-print(t1, "> result:", txt)
+print(t2, txt)
 
 # Looping Through a String
 print(n, "Looping Through a String")
+
 txt = """
 	 > code:
              
@@ -66,6 +79,8 @@ txt = """
                      txt = txt + x + " "
                      
                  print(txt)
+
+	 >>> result:
 """
 print(txt)
 
@@ -74,15 +89,16 @@ txt = ""
 for x in "banana":
   txt = txt + x + " "
 
-print(t1, "> result:", txt)
+print(t2, txt)
 
 # Break
 print(n, "Break")
+
 txt = """
 	 > code:
 	 
                  fruits = ["apple", "banana", "cherry"]
-                 txt = ""
+                 txt    = ""
                  
                  for x in fruits:
                      txt = txt + str(i) + " "
@@ -90,26 +106,29 @@ txt = """
                          break
                      
                  print(txt)
+
+	 >>> result:
 """
 print(txt)
 
 fruits = ["apple", "banana", "cherry"]
 txt = ""
+
 for x in fruits:
   txt = txt + x + " "
   if x == "banana":
     break
 
-print(t1, "> result:", txt)
-print()
+print(t2, txt)
 
 # Continue
 print(n, "Continue")
+
 txt = """
 	 > code:
 	 
                  fruits = ["apple", "banana", "cherry"]
-                 txt = ""
+                 txt    = ""
                  
                  for x in fruits:
                      if x == "banana":
@@ -117,22 +136,27 @@ txt = """
                      txt = txt + x + " "
                  
                  print(txt)
+
+	 >>> result:
 """
 print(txt)
 
 fruits = ["apple", "banana", "cherry"]
 txt = ""
+
 for x in fruits:
   if x == "banana":
     continue
   txt = txt + x + " "
 
-print(t1, "> result:", txt)
+print(t2, txt)
 
 # Range
 print(n, "Range")
+
   # Range
 print(t1, "> Basic Range")
+
 txt = """
 		 > code:
                          
@@ -142,6 +166,8 @@ txt = """
                              txt = txt + str(x) + " "
                              
                          print(txt)
+
+		 >>> result:
 """
 print(txt)
 
@@ -150,9 +176,11 @@ txt = ""
 for x in range(6):
   txt = txt + str(x) + " "
 
-print(t2, "> result:", txt)
+print(t3, txt)
+
   # Range with starting point
 print(n, t1, "> Range with starting point")
+
 txt = """
 		 > code:
                      
@@ -162,6 +190,8 @@ txt = """
                              txt = txt + str(x) + " "
                              
                          print(txt)
+
+		 >>> result:
 """
 print(txt)
 
@@ -170,9 +200,11 @@ txt = ""
 for x in range(2, 6):
   txt = txt + str(x) + " "
 
-print(t2, "> result:", txt)
+print(t3, txt)
+
   # Range with increment
 print(n, t1, "> Range with increment")
+
 txt = """
 		 > code:
                      
@@ -182,6 +214,8 @@ txt = """
                              txt = txt + str(x) + " "
                              
                          print(txt)
+
+		 >>> result:
 """
 print(txt)
 
@@ -190,14 +224,16 @@ txt = ""
 for x in range(2, 30, 3):
   txt = txt + str(x) + " "
 
-print(t2, "> result:", txt)
+print(t3, txt)
+
 # Else
 print(n, "Else")
+
 txt = """
 	 > code:
 	 
                  fruits = ["apple", "banana", "cherry"]
-                 txt = ""
+                 txt    = ""
                  
                  for x in range(6):
                      txt = txt + str(x) + " "
@@ -205,37 +241,40 @@ txt = """
                      txt += "(finally finished)"
                  
                  print(txt)
+
+	 >>> result:
 """
 print(txt)
 
 fruits = ["apple", "banana", "cherry"]
 txt = ""
+
 for x in range(6):
   txt = txt + str(x) + " "
 else:
   txt += "(finally finished)"
 
-print(t1, "> result:", txt)
+print(t2, txt)
 
 # Nested Loops
 print(n, "Nested Loops")
+
 txt = """
 	 > code:
 	 
-                 adj = ["red", "big", "tasty"]
+                 adj    = ["red", "big", "tasty"]
                  fruits = ["apple", "banana", "cherry"]
                  
                  for x in adj:
                      for y in fruits:
                          print(x, y)
-                 
-                 print(txt)
+
+	 >>> result:
 """
 print(txt)
 
 adj = ["red", "big", "tasty"]
 fruits = ["apple", "banana", "cherry"]
-print(t1, "> result:")
 
 for x in adj:
   for y in fruits:

@@ -17,6 +17,29 @@ n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
 			 tab3
 				 tab4
 """
+txt = """
+	 > code:
+	 
+		 tab2
+
+	 >>> result:
+"""
+
+txt = """
+		 > code:
+		 
+			 tab3
+			 
+		 >>> result:
+"""
+
+txt = """
+			 > code:
+
+				 tab4
+
+			 >>> result:
+"""
 
 # Comment
 print(n, "Heading")

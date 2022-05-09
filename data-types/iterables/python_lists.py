@@ -60,6 +60,7 @@ txt = f"""
 print(txt)
 
 fruit_list = ["apple", "banana", "cherry"]
+
 print(t2, f"print(fruit_list) {t1}=", fruit_list)
 print(t2, f"len(fruit_list) {t1}=", len(fruit_list))
 
@@ -142,6 +143,7 @@ print(txt)
 
 fruit_list = ["Apple", "Peach", "Plum"]
 fruit1, fruit2, fruit3 = fruit_list
+
 print(t2, f"fruit1 {t2}=", fruit1)
 print(t2, f"fruit2 {t2}=", fruit2)
 print(t2, f"fruit3 {t2}=", fruit3)

@@ -77,18 +77,31 @@ Recursion:
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
 
 # Creating & Calling a Function
 print(n, "Creating & Calling a Function")
+
 txt = """
-	 > Code
+	 > code
              
 		 def my_function():
                      print("Hello from a function")
+                     
+                 my_function()
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def my_function():
     print(t2, "Hello from a function")
@@ -96,6 +109,7 @@ my_function()
 
 # Arguments
 print(n, "Arguments")
+
 txt = """
 	 > Code
              
@@ -103,9 +117,11 @@ txt = """
                      print(first_name, "Smith")
 
                  my_function("Agent")
+                 
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
+
 
 def my_function(first_name):
     print(t2, first_name, "Smith")
@@ -113,6 +129,7 @@ my_function("Agent")
 
 # Multiple Arguments
 print(n, "Multiple Arguments")
+
 txt = """
 	 > Code
              
@@ -120,9 +137,10 @@ txt = """
                      print(first_name, age)
 
                  my_function("Agent", 100)
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def my_function(first_name, age):
     print(t2, f"name: {first_name}, age: {age}")
@@ -130,6 +148,7 @@ my_function("Agent", 100)
 
 # Arbitrary Arguments
 print(n, "Arbitrary Arguments")
+
 txt = """
 	 > Code
              
@@ -137,9 +156,10 @@ txt = """
                      print(f"number of arguments: {len(args)}")
 
                  my_function("args 1", "args 2", "args 3")
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def my_function(*args):
     print(t2, f"number of arguments: {len(args)}")
@@ -147,6 +167,7 @@ my_function("arg 1", "arg 2", "args 3")
 
 # Keyword Arguments kwargs
 print(n, "Keyword Arguments (kwargs)")
+
 txt = """
 	 > Code
              
@@ -154,9 +175,10 @@ txt = """
                      print("The order of the arguments does not matter!")
 
                  my_function(arg1 = 1, arg2 = 2, arg3 = 3)
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def my_function(arg1, arg2, arg3):
     print(t2, "The order of the arguments does not matter!")
@@ -165,6 +187,7 @@ my_function(arg1 = 1, arg2 = 2, arg3 = 3)
 
 # Arbitrary Keyword Arguments **kwargs
 print(n, "Arbitrary Keyword Arguments (**kwargs)")
+
 txt = """
 	 > Code
              
@@ -172,9 +195,11 @@ txt = """
                      print("The child's last name is " + child["last_name"])
 
                  my_function(first_name = "Agent", last_name = "Smith")
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
+
 
 def my_function(**child):
     print(t2, "The child's last name is " + child["last_name"])
@@ -183,6 +208,7 @@ my_function(first_name = "Agent", last_name = "Smith")
 
 # Default Parameter Value
 print(n, "Default Parameter Value")
+
 txt = """
 	 > Code
              
@@ -191,9 +217,10 @@ txt = """
 
                  my_function("Brazil")
                  my_function()
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def my_function(country = "England"):
     print(t2, "I am from", country)
@@ -203,6 +230,7 @@ my_function()
 
 # List as an Argument
 print(n, "List as an Argument")
+
 txt = """
 	 > Code
              
@@ -212,9 +240,10 @@ txt = """
 
                  fruit_list = ["apple", "banana", "cherry"]
                  my_function(fruit_list)
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def my_function(fruit):
     for x in fruit:
@@ -225,6 +254,7 @@ my_function(fruit_list)
 
 # Return Values
 print(n, "Return Values")
+
 txt = """
 	 > Code
              
@@ -232,9 +262,10 @@ txt = """
                      return 5 * x
 
                  print(my_function(3))
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def my_function(x):
     return 5 * x
@@ -243,6 +274,7 @@ print(t2, my_function(3))
 
 # Recursion
 print(n, "Recursion")
+
 txt = """
 	 > Code
              
@@ -256,9 +288,10 @@ txt = """
                  return result
 
                  tri_recursion(6)
+
+	 >>> result:
 """
 print(txt)
-print(t1, "> result:", n)
 
 def tri_recursion(k):
     if(k > 0):

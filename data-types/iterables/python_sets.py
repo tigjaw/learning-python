@@ -61,10 +61,10 @@ print(t1, f"fruit_set {t3}= ('apple', 'banana', 'cherry', 'apple')", n)
     # Print Set and Set Length
 print(t2, f"print(fruit_set) {t1}=", fruit_set)
 print(t2, f"len(fruit_set) {t1}=", len(fruit_set))
-print(t2, "Duplicate 'apple' was not accepted", n)
+print(t2, "Duplicate 'apple' was not accepted")
 
 # Data Types
-print(t1,"> Set items can be of any data type:")
+print(n, t1,"> Set items can be of any data type:")
 
     # Single Data Types
 txt = f"""
@@ -83,10 +83,10 @@ print(t1, "> Sets can contain multiple data types:", n)
 
 mixed_set = ("abc", 34, True, 40, "male")
 
-print(t2, f"mixed_set {t2}= ('abc', 34, True, 40, 'male')", n)
+print(t2, f"mixed_set {t2}= ('abc', 34, True, 40, 'male')")
 
     # Tuple Object Type
-print(t1, "> Find the type of a Set:", n)
+print(n, t1, "> Find the type of a Set:", n)
 
 print(t2, f"type(int_set) {t2}=", type(int_set))
 
@@ -123,10 +123,10 @@ if "apple" in fruit_set:
     print(t3, "Yes, 'apple' is in fruit_set")
 
 # Add Set items
-print(n, "Add Items", n)
+print(n, "Add Items")
 
     # Add items
-print(t1, "> add()")
+print(n, t1, "> add()")
 
 txt = f"""
 		 > code;
@@ -188,10 +188,10 @@ fruit_set.update(fruit_list)
 print(t3, f"fruit_set {t1}=", fruit_set)
 
 # Remove Set Items
-print(n, "Remove Set items", n)
+print(n, "Remove Set items")
 
     # set.remove(i) - remove specified value
-print(t1, f"> Remove specified value {t1}- set.remove(i)")
+print(n, t1, f"> Remove specified value {t1}- set.remove(i)")
 
 txt = f"""
 		 > code;

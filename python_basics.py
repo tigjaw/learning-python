@@ -48,22 +48,37 @@ Variable Names:
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
 
 # Variable Names
 print(n, "Variable Names")
+
   # Variable names are case-sensitive
 print(t1, "> Variables are case-sensitive")
-this = "lower"
-THIS = "UPPER"
+
 txt = """
+                 # these are different variables
+                 
                  this    = "lower"
                  THIS    = "UPPER"
-                    so   : this is not the same as THIS
 """
 print(txt)
+
+this = "lower"
+THIS = "UPPER"
+
   # Legal Variable Names
 print(t1, "> Legal variable names")
+
 txt = """
                  myvar   = "legal"
                  my_var  = "legal"
@@ -73,16 +88,20 @@ txt = """
                  myvar2  = "legal"
 """
 print(txt)
+
   # Illegal Variable Names
 print(t1, "> Illegal variable names")
+
 txt = """
                  2myvar = "illegal"
                  my-var = "illegal"
                  my var = "illegal"
 """
 print(txt)
+
   # Multi-word Variable names
 print(t1, "> Multi-word Variable names")
+
 txt = """
                  Camel Case:
                      myVariableName   = "Camel"
@@ -95,85 +114,167 @@ txt = """
 
 """
 print(txt)
+
 # applying types
 print("", "Assigning and Printing Types")
+
   # assign without type
-print(t1, "> without Types")
-print()
-X = "5"         # x will be "5"
-Y = 2           # y will be 2
-Z = 7.0         # z will be 7.0
-print(t2, "X = '5'")
-print(t3, "result : X =", type(X), "\t=", X)
-print(t2, "Y = 2")
-print(t3, "result : Y =", type(Y), "\t=", Y)
-print(t2, "Z = 7.0")
-print(t3, "result : Z =", type(Z), "\t=", Z)
-print()
+print(n, t1, "> without Types")
+
+txt = """
+                 > code:
+                 
+			 X = "5"
+			 Y = 2
+			 Z = 7.0
+			 
+                 >>> result:
+"""
+print(txt)
+
+X = "5"
+Y = 2
+Z = 7.0
+
+print(t3, "X =", X, f"{t2}", type(X))
+print(t3, "Y =", Y, f"{t2}", type(Y))
+print(t3, "Z =", Z, f"{t1}", type(Z))
+
   # assign with type
-print(t1, "> with Types")
-print()
-X = str(5)      # x will be "5"
-Y = int(2)      # y will be 2
-Z = float(7)    # z will be 7.0
-print(t2, "X = str(5)")
-print(t3, "result : X =", type(X), "\t=", X)
-print(t2, "Y = int(2)")
-print(t3, "result : Y =", type(Y), "\t=", Y)
-print(t2, "Z = float(7)")
-print(t3, "result : Z =", type(Z), "\t=", Z)
+print(n, t1, "> with Types")
+
+txt = """
+                 > code:
+                 
+			 X = str(5)
+			 Y = int(2)
+			 Z = float(7)
+			 
+                 >>> result:
+"""
+print(txt)
+
+X = str(5)
+Y = int(2)
+Z = float(7)
+
+print(t3, "X =", X, f"{t2}", type(X))
+print(t3, "Y =", Y, f"{t2}", type(Y))
+print(t3, "Z =", Z, f"{t1}", type(Z))
 
 # assigning the same value to multiple variables in one line
 print(n, "Assigning multiple Variables/Values")
-print()
+
+  # assign one value to multiple variables
+print(n, t1, "> assign one value to multiple variables")
+txt = """
+                 > code:
+                 
+			 a = b = c = "abc"
+			 
+                 >>> result:
+"""
+print(txt)
+
 a = b = c = "abc"
-print(t1, "> a = b = c = 'abc'")
-print(t2, "result : a =", a, ", b =", b, ", c =", c)
+
+print(t3, "a =", a)
+print(t3, "b =", b)
+print(t3, "c =", c)
+
+  # assign iterable indices to individual variables
+print(n, t1, "> assign iterable indices to individual variables")
+txt = """
+                 > code:
+                 
+			 # length of string must be equal to the number of variables
+
+			 a, b, c = "abc"
+			 x, y, z = "xxx", "yyy", "zzz"
+			 i, j, k = 1, 2, 3
+			 A, B, C = {"A", "B", "C"}
+			 
+                 >>> result:
+"""
+print(txt)
+
+a, b, c = "abc"
+x, y, z = "xxx", "yyy", "zzz"
+i, j, k = 1, 2, 3
+A, B, C = {"A", "B", "C"}
+
+print(t3, "a =", a)
+print(t3, "b =", b)
+print(t3, "c =", c)
 print()
-# assigning a to a, b to b, and c to c
-a, b, c = "abc" # length of string must be equal to the number of variables
-print(t1, "> a,  b,  c = 'abc'")
-print(t2, "result : a =", a, ", b =", b, ", c =", c)
+print(t3, "x =", x)
+print(t3, "y =", y)
+print(t3, "z =", z)
 print()
-# assigning values to multiple variables in one line
-fruit1, fruit2, fruit3 = "Orange", "Banana", "Cherry"
-print(t1, "> fruit1, fruit2, fruit3  = 'Orange', 'Banana', 'Cherry'")
-print(t2, "result : fruit1 =", fruit1, ", fruit2 =", fruit2, ", fruit3 =", fruit3)
+print(t3, "i =", i)
+print(t3, "j =", j)
+print(t3, "k =", k)
+print()
+print(t3, "A =", A)
+print(t3, "B =", B)
+print(t3, "C =", C)
 
 # string concatenation
 print(n, "String concatenation")
-print()
+
   # output multiple variables, separated by a comma
-print(t1, "> String concatenation with a comma")
-comma1 = "Concatenate" # doesn't require spaces
+print(n, t1, "> with a comma")
+
+txt = """
+                 > code:
+
+                         # doesn't require spaces
+                         
+                         comma1 = "Concatenate"
+                         comma2 = "with"
+                         comma3 = "COMMA"
+                         
+                         print(comma1, comma2, comma3)
+			 
+                 >>> result:
+"""
+print(txt)
+
+comma1 = "Concatenate" 
 comma2 = "with"
-comma3 = "a COMMA"
-txt = """
-                 comma1 = "Concatenate" # doesn't require spaces
-                 comma2 = "with"
-                 comma3 = "a COMMA"
-                 print(comma1, comma2, comma3)
-"""
-print(txt)
-print(t3, "result :", comma1, comma2, comma3)
-print()
+comma3 = "COMMA"
+
+print(t3, comma1, comma2, comma3)
+
   # output multiple variables, separated by a plus sign
-print(t1, "> String concatenation with a comma")
-plus1 = "Concatenate " # must add spaces
-plus2 = "with "
-plus3 = "a PLUS"
+print(t1, "> with a plus")
+
 txt = """
-                 plus1 = "Concatenate " # must add spaces
-                 plus2 = "with "
-                 plus3 = "a PLUS"
-                 print(comma1, comma2, comma3)
+                 > code:
+
+                         # does require spaces
+                         
+                         plus1 = "Concatenate"
+                         plus2 = "with"
+                         plus3 = "PLUS"
+                         
+                         print(plus1, plus2, plus3)
+			 
+                 >>> result:
 """
 print(txt)
-print(t3, "result :", plus1 + plus2 + plus3)
+
+plus1 = "Concatenate" 
+plus2 = "with"
+plus3 = "PLUS"
+
+print(t3, plus1 + plus2 + plus3)
+
 # demonstration of global and local variables
 print(n,"Local and Global Variables")
+
 txt = """
-         > the code
+	 > code:
          
                  # global variables
                  py = "Python is"
@@ -189,17 +290,20 @@ txt = """
                      y = "excellent"
                      global x
                      x = "wonderful"
-
-         > run the code
-         
+                     
                  print_locals()
+                 
                  print("global x:", py, x)
 
                  print_globals()
+                 
                  print("global x:", py, x)
                  print("global y:", py, y)
+                 
+         >>> result:
 """
 print(txt)
+
 py = "Python is"
 x = "awesome" # global x variable
 
@@ -213,8 +317,6 @@ def print_globals():
   global x
   x = "wonderful"
 
-print(t1, "> result:")
-print()
 print_locals()
 print(t2, "global x:", py, x)
 
@@ -224,8 +326,9 @@ print(t2, "global y:", py, y)
 
 # IF functions and methods
 print(n, "If functions and methods")
+
 txt = """
-         > define a function
+         > code:
          
                  x = 5
                  y = 2
@@ -236,23 +339,22 @@ txt = """
                          global more_than
                          more_than = True
                          
-         > run the above function
-         
                  compare_xy()
+                 print(more_than)
+                 
+         >>> result:
 """
 print(txt)
+
 x = 5
 y = 2
-
-  # define a function
 more_than = False
-def compare_xy():    
+
+def compare_xy(): # define a function
     if x > y:
         global more_than
         more_than = True
 
-  # run the above function
 compare_xy()
-print(t1, "> result:")
-print()
+
 print(t2, "more_than =", more_than)

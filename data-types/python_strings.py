@@ -71,120 +71,284 @@ String Methods:
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
 
 # Hello World
 hello_world = "HELLO, WORLD!"
+
 print("hello_world =", hello_world)
 
 # strings are arrays
-print(t1, "Strings are arrays, so hello_world[0] =", hello_world[0])
+print(n, "Strings are arrays")
+
+txt = """
+	 > code:
+
+		 hello_world = "HELLO, WORLD!"
+
+		 print(hello_world[0])
+
+	 >>> result:
+"""
+print(txt)
+
+print(t2, hello_world[0])
 
 # loop through each character of the string
-print(n, "Loop through String (array)")
+print(n, "Loop through String (array)", n)
+
+txt = """
+	 > code:
+
+		 for x in hello_world:
+                     print(x)
+
+	 >>> result:
+"""
+print(txt)
+
 for x in hello_world:
-    print(t1, x)
+    print(t2, x)
 
 # print string length
 print(n, "Print String length via len(hello_world)")
-print(t1, len(hello_world))
+
+txt = """
+	 > code:
+
+		 hello_world = "HELLO, WORLD!"
+
+		 print(len(hello_world))
+
+	 >>> result:
+"""
+print(txt)
+
+print(t2, len(hello_world))
 
 # use the keyword in to check if certain characters are present
 print(n, "Check String with 'in' keyword")
-if "world" in hello_world:
-    print(t1, "'world'", "\tIS IN\t\t", "'HELLO, WORLD!'")
+
+txt = """
+	 > code:
+
+                 hello_world = "HELLO, WORLD!"
+
+		 if "WORLD" in hello_world:
+                     print("'WORLD' IS IN 'HELLO, WORLD!'")
+                     
+                 if "world" not in hello_world:
+                     print("'world' IS NOT IN 'HELLO, WORLD!'")
+                 
+                 if "planet" not in hello_world:
+                     print("'planet' IS NOT IN 'HELLO, WORLD!'")
+
+	 >>> result:
+"""
+print(txt)
+
 if "WORLD" in hello_world:
-    print(t1, "'WORLD'", "\tIS IN\t\t", "'HELLO, WORLD!'")
+    print(t2, f"'WORLD' {t1} IS IN {t2} 'HELLO, WORLD!'")
+if "world" not in hello_world:
+    print(t2, f"'world'  {t1} IS IN {t2} 'HELLO, WORLD!'")
 if "planet" not in hello_world:
-    print(t1, "'planet'", "\tIS NOT IN\t", "'HELLO, WORLD!'")
+    print(t2, f"'planet' {t1} IS NOT IN {t1} 'HELLO, WORLD!'")
 
 # String Slicing
-print(n, "String slicing from start of", "\t'" + hello_world + "'")
-print(t1, "hello_world[2:5]\t:", "index 2 (inc.) to index 5 (not inc.)")
-print(t2, hello_world[2:5])
-print(t1, "hello_world[:5]\t:", "from start to index 5 (not inc.)")
-print(t2, hello_world[:5])
-print(t1, "hello_world[2:]\t:", "from index 2 (inc.) to the end")
-print(t2, hello_world[2:])
+print(n, f"String slicing")
 
-print(n, "String slicing from end of", "\t'" + hello_world + "'")
-print(t1, "hello_world[-5:-2]\t:", "from index -5 (inc.) to index -2 (not inc.)")
-print(t2, hello_world[-5:-2])
+txt = """
+	 > code:
+
+                 hello_world = "HELLO, WORLD!"
+
+                 # slicing from start
+
+			 # index 2 (inc.) to index 5 (not inc.)
+			 
+			 print(hello_world[2:5])
+
+                         # from start to index 5 (not inc.)
+                         
+                         print(hello_world[:5])
+
+                         # from index 2 (inc.) to the end
+                         
+                         print(hello_world[2:])
+
+                 # slicing from end
+
+                         # from index -5 (inc.) to index -2 (not inc.)
+                         
+                         print(hello_world[-5:-2])
+
+	 >>> result:
+"""
+print(txt)
+
+print(t3, hello_world[2:5])
+print(t3, hello_world[:5])
+print(t3, hello_world[2:])
+print(t3, hello_world[-5:-2])
 
 # Modifying Strings
 print(n, "Modifying Strings")
 
-# Convert String to upper or lower case
+    # upper() and lower()
+print(n, t1, "> Convert String to upper or lower case")
+
+txt = """
+                 > code:
+
+                         lower_case = "lower"
+                         upper_case = "UPPER"
+
+                         lower_case.upper()
+                         upper_case.lower()
+
+                 >>> result:
+"""
+print(txt)
+
 lower_case = "lower"
 upper_case = "UPPER"
-print(t1, "lower_case =", lower_case)
-print(t2, "lower_case.upper() =", lower_case.upper())
-print(t1, "upper_case =", upper_case)
-print(t2, "upper_case.lower() =", upper_case.lower())
 
-# Removing Whitespace from start and end of String with strip() method
+print(t3, lower_case.upper())
+print(t3, upper_case.lower())
+
+    # strip() method
+print(n, t1, "> Strip white space")
+
+txt = """
+                 > code:
+
+                         strip_me = " strip "
+
+                         strip_me.strip()
+
+                 >>> result:
+"""
+print(txt)
+
 strip_me = " strip "
-print(t1, "strip_me = '" + strip_me + "'")
-print(t2, "strip_me.strip() = '" + strip_me.strip() + "'")
 
-# Replacing parts of a String with another with replace() method
+print(t3, "" + strip_me.strip())
+
+    # replace() method
+print(n, t1, "> Replace characters")
+
+txt = """
+                 > code:
+
+                         replace_me = "this"
+
+                         replace_me.replace('is', 'at')
+
+                 >>> result:
+"""
+print(txt)
+
 replace_me = "this"
-print(t1, "replace_me = '" + replace_me + "'")
-print(t2, "replace_me.replace('is', 'at')")
-print(t2, "replace_me = '" + replace_me.replace('is', 'at') + "'")
 
-# Split String with split() method
+print(t3, replace_me.replace('is', 'at'))
+
+    # split() method
+print(n, t1, "> Split string")
+
+txt = """
+                 > code:
+
+                         split_me = "split_me"
+
+                         split_me.split('_')
+
+                 >>> result:
+"""
+print(txt)
+
 split_me = "split_me"
-print(t1, "split_me = '" + split_me + "'")
-print(t2, "split_me.split('_') returns ", split_me.split('_'))
+
+print(t3, split_me.split('_'))
 
 # String Concatenation
 print(n, "String Concatenation")
 
   # output multiple variables, separated by a comma
 print(t1, "> String concatenation with a comma")
-comma1 = "Concatenate" # doesn't require spaces
-comma2 = "with"
-comma3 = "a COMMA"
+
 txt = """
-                 comma1 = "Concatenate" # doesn't require spaces
-                 comma2 = "with"
-                 comma3 = "a COMMA"
-                 print(comma1, comma2, comma3)
+                 > code:
+
+                         # doesn't require spaces at the end
+                         
+                         comma1 = "Concatenate"
+                         comma2 = "with"
+                         comma3 = "COMMA"
+                         
+                         print(comma1, comma2, comma3)
+
+                 >>> result:
 """
 print(txt)
-print(t3, "result :", comma1, comma2, comma3)
+
+comma1 = "Concatenate"
+comma2 = "with"
+comma3 = "COMMA"
+
+print(t3, comma1, comma2, comma3)
 
   # output multiple variables, separated by a plus sign
 print(n, t1, "> String concatenation with a comma")
-plus1 = "Concatenate " # must add spaces
-plus2 = "with "
-plus3 = "a PLUS"
+
 txt = """
-                 plus1 = "Concatenate " # must add spaces
-                 plus2 = "with "
-                 plus3 = "a PLUS"
-                 print(comma1, comma2, comma3)
+                 > code:
+
+                         # requires spaces at the end
+                         
+                         plus1 = "Concatenate"
+                         plus2 = "with"
+                         plus3 = "PLUS"
+                         
+                         print(plus1, plus2, plus3)
+
+                 >>> result:
 """
 print(txt)
-print(t3, "result :", plus1 + plus2 + plus3)
+
+plus1 = "Concatenate"
+plus2 = "with"
+plus3 = "PLUS"
+
+print(t3, plus1 + plus2 + plus3)
 
 # Formatting Strings
-print(n, t1, "Formatting Strings")
+print(n, "Formatting Strings")
+
+txt = """
+ 	 > code:
+
+                 name = "Joshua"
+                 age = 12
+                         
+                 txt = "My name is {} and I am {}"
+
+                 print(txt.format(name, age))
+
+ 	 >>> result:
+"""
+print(txt)
+
+name = "Joshua"
 age = 12
-age_text = "age = {}"
-txt = "My name is Joshua and I am {}"
-print(t1, "age = '"+ age_text.format(age) +"', txt = '"+ txt +"'")
-print(t2, "txt.format(age) = '"+ txt.format(age) +"'")
+txt = "My name is {} and I am {}"
 
-print()
-
-item_id = 320
-price = 49.95
-quantity = 3
-txt = "item_id = {}, price = {}, quantity = {}"
-print(t1, txt.format(item_id, price, quantity))
-my_order = "I want to pay £{2} for {0} pieces of item {1}"
-print(t1, "my_order = '"+ my_order +"'")
-print(t2, "my_order.format(quantity, item_id, price)")
-print(t3, "'"+ my_order.format(quantity, item_id, price) +"'")
+print(t2, txt.format(name, age))

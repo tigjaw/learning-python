@@ -67,23 +67,23 @@ int_tuple = (1, 5, 7, 9, 3)
 bool_tuple = (True, False, False)
 
     # Mixed Data Types
-print(t1, "> Tuples can contain multiple data types:", n)
+print(t1, "> Tuples can contain multiple data types:")
 
 mixed_tuple = ("abc", 34, True, 40, "male")
 
-print(t2, f"mixed_tuple {t2}= ('abc', 34, True, 40, 'male')")
+print(n, t2, f"mixed_tuple {t2}= ('abc', 34, True, 40, 'male')")
 
     # Tuple Object Type
-print(n, t1, "> Find the type of a Tuple:", n)
+print(n, t1, "> Find the type of a Tuple:")
 
-print(t2, f"type(int_tuple) {t1}=", type(int_tuple))
+print(n, t2, f"type(int_tuple) {t1}=", type(int_tuple))
 
 # Access Items
-print(n, "Accessing Tuple items:", n)
+print(n, "Accessing Tuple items:")
 
 fruit_tuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
 
-print(t1, f"fruit_tuple {t3}=", fruit_tuple)
+print(n, t1, f"fruit_tuple {t3}=", fruit_tuple)
 
     # Access Single Items
 print(n, t1, "> Access Single Items:", n)

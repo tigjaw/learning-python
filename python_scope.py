@@ -33,10 +33,43 @@ Naming Variables:
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
+txt = """
+	 > code:
+	 
+		 tab2
+
+	 >>> result:
+"""
+
+txt = """
+		 > code:
+		 
+			 tab3
+			 
+		 >>> result:
+"""
+
+txt = """
+			 > code:
+
+				 tab4
+
+			 >>> result:
+"""
 
 # Local scope
 print(n, "Local scope")
+
 txt = f"""
 
 """
@@ -50,6 +83,7 @@ myfunc()
 
 # Comment
 print(n, "Heading")
+
 txt = f"""
 
 """
@@ -57,6 +91,7 @@ print(txt)
 
 # Comment
 print(n, "Heading")
+
 txt = f"""
 
 """
@@ -64,6 +99,7 @@ print(txt)
 
 # Comment
 print(n, "Heading")
+
 txt = f"""
 
 """
@@ -71,6 +107,7 @@ print(txt)
 
 # Comment
 print(n, "Heading")
+
 txt = f"""
 
 """

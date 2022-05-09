@@ -28,23 +28,35 @@ super() Function:
 """
 print(txt)
 
+# use for formatting code
 n, t1, t2, t3, t4 = "\n", "\t", "\t\t", "\t\t\t", "\t\t\t\t"
+
+# use for formatting snippets
+"""
+	 tab1
+		 tab2
+			 tab3
+				 tab4
+"""
 
 # Parent Class
 print(n, "Parent Class")
+
 txt = """
-	 > create a parent class
+	 > code:
 	 
-             class Person:
-                 def __init__(self, first_name, last_name):
-                     self.first_name = first_name
-                     self.last_name = last_name
+		 class Person:
+                     def __init__(self, first_name, last_name):
+                         self.first_name = first_name
+                         self.last_name = last_name
 
-                 def print_name(self):
-                     print(self.first_name, self.last_name)
+                     def print_name(self):
+                         print(self.first_name, self.last_name)
 
-             person = Person("Parent", "Class")
-             person.print_name()
+                 person = Person("Parent", "Class")
+                 person.print_name()
+
+	 >>> result:
 """
 print(txt)
 
@@ -54,21 +66,24 @@ class Person:
         self.last_name = last_name
 
     def print_name(self):
-        print(t1, f">>> result: {self.first_name} {self.last_name}")
+        print(t2, f"{self.first_name} {self.last_name}")
 
 person = Person("Parent", "Class")
 person.print_name()
 
 # Child Class
 print(n, "Child Class")
-txt = """
-	 > create a child class
-	 
-             class Student(Person):
-                 pass
 
-             student = Student("Student", "Class")
-             student.print_name()
+txt = """
+	 > code:
+	 
+		 class Student(Person):
+                     pass
+
+                 student = Student("Student", "Class")
+                 student.print_name()
+
+	 >>> result:
 """
 print(txt)
 
@@ -80,15 +95,20 @@ student.print_name()
 
 # __init__() Function
 print(n, "__init__() Function")
+
 txt = """
-	 > don't inherit parent's __init__() function
-	 
-             class Student(Person):
-                 def __init__(self, first_name, last_name):
-                     pass
+	 > code:
+
+                 # don't inherit parent's __init__() function
                  
-             student = Student("Don't", "Inherit")
-             student.print_name()
+		 class Student(Person):
+                     def __init__(self, first_name, last_name):
+                         pass
+                 
+                 student = Student("Don't", "Inherit")
+                 student.print_name()
+
+	 >>> result:
 """
 print(txt)
 
@@ -97,17 +117,21 @@ class Student(Person):
         pass
 
 student = Student("Don't", "Inherit")
-print(t1, f">>> AttributeError: 'Student' object has no attribute 'first_name'")
+print(t2, f"AttributeError: 'Student' object has no attribute 'first_name'")
 
 txt = """
-	 > inherit parent's __init__() function
-	 
-             class Student(Person):
-                 def __init__(self, first_name, last_name):
-                     Person.__init__(self, first_name, last_name)
+	 > code:
+
+                 # inherit parent's __init__() function
+                 
+		 class Student(Person):
+                     def __init__(self, first_name, last_name):
+                         Person.__init__(self, first_name, last_name)
                      
-             student = Student("Do", "Inherit")
-             student.print_name()
+                 student = Student("Do", "Inherit")
+                 student.print_name()
+
+	 >>> result:
 """
 print(txt)
 
@@ -121,14 +145,18 @@ student.print_name()
 # super() Function
 print(n, "super() Function")
 txt = """
-	 > super() inherits all methods and properties
-	 
-             class Student(Person):
-                 def __init__(self, first_name, last_name):
-                     super().__init__(first_name, last_name)
+	 > code:
 
-             student = Student("Super", "Function")
-             student.print_name()
+                 # super() inherits all methods and properties
+                 
+		 class Student(Person):
+                     def __init__(self, first_name, last_name):
+                         super().__init__(first_name, last_name)
+
+                 student = Student("Super", "Function")
+                 student.print_name()
+
+	 >>> result:
 """
 print(txt)
 
