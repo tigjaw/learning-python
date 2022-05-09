@@ -70,45 +70,169 @@ txt = """
 # Local scope
 print(n, "Local scope")
 
-txt = f"""
+    # inside a function
+print(n, t1, "> Inside a Function")
 
+txt = """
+		 > code:
+		 
+			 def my_function():
+			 
+                             x = 777
+                             print(x)
+
+                         my_function()
+			 
+		 >>> result:
 """
 print(txt)
 
-def myfunc():
-    x = 300
-    print(t2, x)
+def my_function():
+    
+    x = 777
+    print(t3, x)
 
-myfunc()
+my_function()
+
+    # function inside function
+print(n, t1, "> Function inside Function")
+
+txt = """
+		 > code:
+		 
+			 def my_function():
+			 
+                             x = 777
+                             
+                             def my_inner_function():
+                                 print(x)
+                                 
+                             my_inner_function()
+                             
+                         my_function()
+			 
+		 >>> result:
+"""
+print(txt)
+
+def my_function():
+    x = 777
+  
+    def my_inner_function():
+        print(t3, x)
+    my_inner_function()
+
+my_function()
 
 # Comment
-print(n, "Heading")
+print(n, "Global Scope")
 
-txt = f"""
+    # global scope
+print(n, t1, "> Global variable")
 
+txt = """
+		 > code:
+		 
+			 x = 777
+			 
+                         def my_function():
+                             print(x)
+                             
+                         my_function()
+                         print(x)
+			 
+		 >>> result:
 """
 print(txt)
+
+x = 777
+
+def my_function():
+    print(t3, x)
+
+my_function()
+print(t3, x)
+
+    # naming variables
+print(n, t1, "> Maming variables")
+
+txt = """
+		 > code:
+		 
+			 x = 777
+			 
+                         def my_function():
+                             x = 444
+                             print(x)
+                             
+                         my_function()
+                         print(x)
+			 
+		 >>> result:
+"""
+print(txt)
+
+x = 777
+
+def my_function():
+    x = 1
+    print(t3, x)
+
+my_function()
+print(t3, x)
 
 # Comment
-print(n, "Heading")
+print(n, "Global keyword")
 
-txt = f"""
+    # create global variable, within in the local scope
+print(n, t1, "> create global variable, within in the local scope")
 
+txt = """
+		 > code:
+		 
+			 def my_function():
+                             global x
+                             x = 777
+                             
+                         print(x)
+			 
+		 >>> result:
 """
 print(txt)
 
-# Comment
-print(n, "Heading")
+def my_function():
+    global x
+    x = 777
 
-txt = f"""
+my_function()
 
+print(t3, x)
+
+    # use global keyword to change global variable
+print(n, t1, "> use global keyword to change global variable")
+
+txt = """
+		 > code:
+		 
+			 x = 777
+			 
+                         def my_function():
+                             global x
+                             x = 1
+                             
+                         my_function()
+                         print(x)
+			 
+		 >>> result:
 """
 print(txt)
 
-# Comment
-print(n, "Heading")
+x = 300
 
-txt = f"""
+def my_function():
+    global x
+    x = 200
 
-"""
-print(txt)
+my_function()
+
+print(t3, x)
